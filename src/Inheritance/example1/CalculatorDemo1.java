@@ -2,16 +2,30 @@ package Inheritance.example1;
 
 class Calc {
     int left, right;
+    int third = 0;
+
+    public void setOprands(int left, int right) {
+        this.left = left;
+        this.right = right;
+    }
+    
+    public void setOprands(int left, int right, int third) {
+        this.setOprands(left, right);
+        // this.left = left;
+        // this.right = right;
+        this.third = third;
+    }
+
     public Calc (int left, int right) {
         this.left = left;
         this.right = right;
     }
 
     public void sum() {
-        System.out.println(this.left + this.right);
+        System.out.println(this.left + this.right+ this.third);
     }
     public void avg() {
-        System.out.println((this.left + this.right) /2);
+        System.out.println((this.left + this.right+ this.third) /2);
     }
 }
 
